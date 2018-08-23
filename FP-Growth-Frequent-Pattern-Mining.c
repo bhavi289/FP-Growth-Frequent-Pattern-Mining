@@ -176,13 +176,13 @@ void AddInFPTree(NODE* node, TRANSACTION* singleTransaction, int lengthOfTransac
 				temp = IncreaseFrequency(node->child, singleTransaction[i].item );
 				temp->parent = node;
 				node = temp;
-				printf("IncreaseFrequency [[%s -> %s]]\n", node->parent->item, node->item);
+				// printf("IncreaseFrequency [[%s -> %s]]\n", node->parent->item, node->item);
 			}
 			else{
 				temp = AddSibling(node->child, singleTransaction[i].item, singleTransaction[i].frequency);
 				temp->parent = node;
 				node = temp;
-				printf("AddSibling [[%s -> %s]]\n", node->parent->item, node->item );
+				// printf("AddSibling [[%s -> %s]]\n", node->parent->item, node->item );
 				node->nextSameItem = NULL;
 				CreateHeaderTableLink(headerTable, node, lengthOfTable);
 			}
@@ -191,7 +191,7 @@ void AddInFPTree(NODE* node, TRANSACTION* singleTransaction, int lengthOfTransac
 			node->child = NewNode(singleTransaction[i].item, singleTransaction[i].frequency);
 			node->child->parent = node;
 			node = node->child;
-			printf("NewNode [[%s -> %s]]\n", node->parent->item, node->item);
+			// printf("NewNode [[%s -> %s]]\n", node->parent->item, node->item);
 			node->nextSameItem = NULL;
 			CreateHeaderTableLink(headerTable, node, lengthOfTable);
 		}
@@ -243,17 +243,84 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
         row = row + 1;
 	    qsort(singleTransaction, total, sizeof(TRANSACTION), cmpfunc);
 	    // printf("%d\n", total );
-		printf("\n");
+		/* printf("\n");
 	    
 	    for ( i=0; i<total; i++ ){
 			printf("(%s-%d) ", singleTransaction[i].item, singleTransaction[i].frequency);
 		}
-		printf("\n");
+		printf("\n"); */
 		AddInFPTree(root, singleTransaction, total, headerTable, lengthOfTable);
         // if(row == 9) break;
     }
 }
 
+int NewHeaderTable(HEADERTABLE *temporaryTable, char insertString[], int index){
+	// static int index = 0;
+	printf("index is %d\n", index);
+	int i = 0, flag = 0;
+	// printf("%s\n", insertString);
+	for(int i = 0; i<index; i++){
+		if (strcmp(temporaryTable[i].item,insertString) == 0){
+			temporaryTable[i].frequency += 1;
+			flag = 1;
+			break;
+		}
+	}
+	if (flag == 0){
+		strcpy(temporaryTable[index].item, insertString);
+		temporaryTable[index].frequency = 1;
+		index = index + 1;
+	}
+	return index;
+}
+
+void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
+	// index becomes length of new header table
+	int i;
+	for(i = lengthOfTable-1; i>=lengthOfTable-1; i--){
+		HEADERTABLE* newHeaderTable = (HEADERTABLE *)malloc(100000 * sizeof(HEADERTABLE));
+		printf("%s\n", headerTable[i].itemNode->item );
+		NODE* sameItemLinks = headerTable[i].itemNode;
+		int index=0;
+		HEADERTABLE* temporaryTable = (HEADERTABLE *)malloc(100000 * sizeof(HEADERTABLE));
+		while(sameItemLinks){
+			// printf("----------%s-------------\n",sameItemLinks->nextSameItem->item);
+			NODE* treeLinks = sameItemLinks;
+			while(strcmp(treeLinks->item,"")!=0){
+				// printf("** %s **\n", treeLinks->item);
+				index = NewHeaderTable(temporaryTable , treeLinks->item, index);
+				treeLinks = treeLinks->parent;
+			}
+			sameItemLinks = sameItemLinks->nextSameItem;
+		}
+		int supportThreshold = SUPPORT * 1000, j=0;
+	    printf("supportThreshold- %d %d\n", supportThreshold, index );
+	    for ( j=0; j<index; j++ ){
+			// if(temporaryTable[j].frequency > supportThreshold){
+			// 	headerTable[j] = temporaryTable[j];
+				printf("%s\n", temporaryTable[j].item);
+			// }
+			// else break;
+	    }
+	    qsort(temporaryTable, index, sizeof(HEADERTABLE), cmpfunc);
+	    for ( j=0; j<index; j++ ){
+			// if(temporaryTable[j].frequency > supportThreshold){
+			// 	headerTable[j] = temporaryTable[j];
+				printf("--%s %d\n", temporaryTable[j].item, temporaryTable[j].frequency);
+				// temporaryTable[j].frequency += 40;
+			// }
+			// else break;
+	    }
+	    for ( j=0; j<index; j++ ){
+			if(temporaryTable[j].frequency > supportThreshold){
+				newHeaderTable[j] = temporaryTable[j];
+				printf("%s\n", newHeaderTable[j].item);
+			}
+			else break;
+	    }
+	    free(temporaryTable);
+	}
+}	
 
 int main(){
 	char fileName[] = "groceries_subset.csv";
@@ -265,8 +332,8 @@ int main(){
 	// }
 	NODE *root = NewNode("", 1);
 	MakeTree(fileName, headerTable, lengthOfTable, root);
+
 	printf("ROOT- %s %d %s %d\n", root->item, root->frequency, root->child->item, root->child->frequency);
 
-
-
+	MineFrequentItemsets(headerTable, lengthOfTable);
 }
