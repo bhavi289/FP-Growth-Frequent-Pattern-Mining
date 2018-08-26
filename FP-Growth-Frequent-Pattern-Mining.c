@@ -12,17 +12,17 @@ FILE *finalResult;
 typedef struct Node{
 	char item[10000];
 	int frequency;
-	struct Node* parent;
+	struct Node* parent; // Pointer to parent Node in C
 	struct Node* child;
-	struct Node* next;
-	struct Node* nextSameItem;
-	int isEnd;
+	struct Node* next; // Not Using
+	struct Node* nextSameItem; //Pointer To Node in Tree with Same Item Name
+	int isEnd; // Not Using
 }NODE;
 
 typedef struct HeaderTable{
 	char item[10000];
 	int frequency;
-	NODE* itemNode;
+	NODE* itemNode; // Pointer To Node in Tree with same Item Name
 	// pointer to tree node
 
 }HEADERTABLE;
@@ -36,13 +36,20 @@ typedef struct  Transaction{
 	int frequency;
 }TRANSACTION;
 
+// Called in Recursion
 void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable);
 
-
+/*
+	Compare function to sort on basis of frequency using qsort function
+*/
 int cmpfunc (const void * a, const void * b) {
    return ( (*(HEADERTABLE*)b).frequency - (*(HEADERTABLE*)a).frequency );
 }
 
+
+/*
+	Items are added in the Header Table
+*/
 int AddInHeaderTable(HEADERTABLE *temporaryTable, char insertString[]){
 	static int index = 0;
 	int i = 0, flag = 0;
@@ -62,6 +69,9 @@ int AddInHeaderTable(HEADERTABLE *temporaryTable, char insertString[]){
 	return index;
 }
 
+/*
+	CSV File is Read and based on Items and SUPPORT, Headertable is formed
+*/
 int MakeHeaderTable(char fileName[], HEADERTABLE* headerTable){
 	FILE *fp;
 	HEADERTABLE* temporaryTable = (HEADERTABLE *)malloc(100000 * sizeof(HEADERTABLE));
@@ -114,6 +124,11 @@ int MakeHeaderTable(char fileName[], HEADERTABLE* headerTable){
 	return i;
 }
 
+/*
+	After forming Header Table we need to remove all items from all transactions which are
+	not there in Header Table.
+	This function checks the presence of item in Header Table and returns accordingly.
+*/	
 int CheckInHeaderTable(HEADERTABLE *headerTable, char insertString[], int lengthOfTable){
 	int i, flag = 0;
 	for ( i = 0; i < lengthOfTable; ++i){
@@ -125,6 +140,9 @@ int CheckInHeaderTable(HEADERTABLE *headerTable, char insertString[], int length
 	return flag;
 }
 
+/*
+	Link Header Table entries to nodes in the tree.
+*/
 void CreateHeaderTableLink(HEADERTABLE* headerTable, NODE* node, int lengthOfTable){
 	int i;
 	for(i=0; i<lengthOfTable; i++){
@@ -139,6 +157,9 @@ void CreateHeaderTableLink(HEADERTABLE* headerTable, NODE* node, int lengthOfTab
 	}
 }
 
+/*
+	Creating a new Node
+*/
 NODE* NewNode(char item[], int frequency){
 	NODE *new_node = (NODE*)malloc(sizeof(NODE));
 	strcpy(new_node->item, item);
@@ -146,11 +167,17 @@ NODE* NewNode(char item[], int frequency){
 	return new_node;
 }
 
+/*
+	Adding a child to the node. Since child already exists, the new node is appended at the end of linked list.
+*/
 NODE* AddSibling(NODE* node, char item[], int frequency){
 	while(node->next) node = node->next;
 	return node->next = NewNode(item, frequency);
 }
 
+/*
+	Checking If given node has children
+*/
 int CheckChildren(NODE* node, char item[]){
 	NODE* temp = node;
 		// printf("%s %s\n", temp->item, item);
@@ -163,6 +190,9 @@ int CheckChildren(NODE* node, char item[]){
 	return 0;
 }
 
+/*
+	Increasing Frequency of Node.
+*/
 NODE* IncreaseFrequency(NODE *node, char item[]){
 	NODE* temp = node;
 	while (temp){
@@ -176,6 +206,13 @@ NODE* IncreaseFrequency(NODE *node, char item[]){
 	return node; // not really reqd
 }
 
+/*
+	This function has 2 modes.
+	Mode 0 is for forming the tree initially from the CSV.
+	Mode 1 is when a new Header table is formed when a node is expanded.
+
+	AddSibling() detects branching in Tree and is used to decide whether tree is linear or not.
+*/
 int AddInFPTree(NODE* node, TRANSACTION* singleTransaction, int lengthOfTransaction, HEADERTABLE* headerTable, int lengthOfTable, int mode){
 	int i, flag=0;
 	NODE* temp;
@@ -211,34 +248,12 @@ int AddInFPTree(NODE* node, TRANSACTION* singleTransaction, int lengthOfTransact
 	}
 	return flag;
 }
-char n;
-void subset(int start, int index, int num_sub,char items[][200])
-{
-    int i, j;
-    if (index - start + 1  ==  num_sub)
-    {
-        if (num_sub  ==  1)
-        {
-            for (i = 0;i < n;i++)
-                printf("%s\n", items[i]);
-        }
-        else
-        {
-            for (j = index;j < n;j++)
-            {
-                for (i = start;i < index;i++)
-                    printf("%s, ", items[i]);
-                printf("%s\n", items[j]);
-            }
-            if (start != n - num_sub)
-                subset(start + 1, start + 1, num_sub, items);
-        }
-    }
-    else
-    {
-        subset(start, index + 1, num_sub, items);
-    }
-}
+
+
+/*
+	Once a linear tree is formed permute all members of the tree with the expanded Node.
+	All itemsets of all itemlengths are produced.
+*/
 
 void grayCode(TRANSACTION* transaction, int N, char item[], int frequency) {
     int grayCode[(int) pow(2, N)];
@@ -271,7 +286,7 @@ void grayCode(TRANSACTION* transaction, int N, char item[], int frequency) {
             binary[i] /= 10;
         }
         //printf("\n");
-        finalResult = fopen("final_result.txt","a");
+        finalResult = fopen("all_results.txt","a");
         // fprintf(finalResult, "t is %s-%s\n",t, item );
         if(strcmp(t,item)!=0 && strcmp(t,"")!=0){
 	        strcat(t, ",");
@@ -285,30 +300,12 @@ void grayCode(TRANSACTION* transaction, int N, char item[], int frequency) {
     }
 }
 
- void permute(NODE *h_node, TRANSACTION* singleTransaction, int total, NODE* expandedNode)
- {
- 	// printf("Expanded Node %s\n", expandedNode->item);
- 	char items[200][200];
- 	int i=0;
- 	while(strcmp(h_node->item,"")!=0)
- 	{
- 		strcpy(items[i],h_node->item);
- 		// printf("ins %s\n", items[i]);
- 		i++;
- 		h_node=h_node->parent;
- 	}
- 	int length = i;
- 	// printf("%d\n", length);
- 	int j=0;
- 	for(j=0;j<total;j++)
- 	{
-
- 		// printf("Inserted Strings-> %s\n", singleTransaction[j].item);
-	 	grayCode(singleTransaction, total, expandedNode->item, expandedNode->frequency);
- 	}
-
- }
-
+/*
+	This Function is called in 2 modes, 0 and 1
+   -int mode = 0 is when we're forming FP tree for first time.
+   -int mode = 1 is when we're forming a FP tree when we've expanded one of the nodes and formed
+	a new header table.
+*/
 void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE* root, int mode, NODE* expandedNode){
 	// printf("Making Tree <%s>\n", fileName);
 	FILE *fp;
@@ -317,7 +314,7 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 	char transaction[20000];
 	fp = fopen(fileName, "r");
 	int row = 0, i;
-	FILE *fp2 = fopen("initial_tree.txt", "a");
+	FILE *fp2 = fopen("initial_transactions_modified.txt", "a");
 
 	while(fscanf(fp," %[^\n]s",transaction) == 1){
 		int total = 0;
@@ -341,6 +338,11 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 			else if (transaction[i] == ',') {
 				insertString[index] = '\0';
 				int freq = 0;
+				/*
+					After forming Header Table we need to remove all items from all transactions which are
+					not there in Header Table
+				*/	
+
 				freq = CheckInHeaderTable(headerTable, insertString, lengthOfTable);
 				// printf("here %d %s\n", freq, insertString);
 
@@ -380,29 +382,30 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 		}
 		// printf("%d %d ****\n", total, lengthOfTable);
 
+		/*
+			Once we've removed items from transactions which are not there in Header Table we form the FP tree
+			from the transactions.
+		*/	
 		int check = AddInFPTree(root, singleTransaction, total, headerTable, lengthOfTable, mode);
-		// printf("lengthOfTable %d\n", lengthOfTable);
 		if(mode && total){
 			if(check){
-				// printf("recurse\n");
+				// printf("Recursing\n");
 				MineFrequentItemsets(headerTable, total);
-				// return;
-				// recurse
 			}
 			else{
-				// printf("PERMUTE $%s$\n", headerTable[lengthOfTable-1].itemNode->item );
 				if(headerTable[lengthOfTable-1].itemNode)
-					permute(headerTable[lengthOfTable-1].itemNode, singleTransaction, total, expandedNode);
-				// all permutations
+					grayCode(singleTransaction, total, expandedNode->item, expandedNode->frequency);
 			}
 		}
 
-        // if(row == 9) break;
     }
 			fclose(fp2);
 
 }
 
+/*
+	Function to form header table when expanding node in dataset.
+*/
 int NewHeaderTable(HEADERTABLE *temporaryTable, char insertString[], int index, int frequency, char expandedString[]){
 	// static int index = 0;
 	int i = 0, flag = 0;
@@ -421,10 +424,9 @@ int NewHeaderTable(HEADERTABLE *temporaryTable, char insertString[], int index, 
 	return index;
 }
 
-void NewFPTree(HEADERTABLE* headerTable, HEADERTABLE* newHeaderTable, int rowNumber){
-
-}
-
+/*
+	Function used to convert integer to string.
+*/
 void tostring(char str[], int num)
 {
     int i, rem, len = 0, n;
@@ -444,7 +446,17 @@ void tostring(char str[], int num)
     str[len] = '\0';
 }
 
-
+/*
+	Header Table is traversed. FP tree node connected to entry is expanded till root and then 
+	subsequent nextSameItem node is expanded.
+	New Set of transactions is obtained.
+	A new Header Table is formed.
+	MakeTree function is called with mode = 1, and new header table is sent to it.
+	In make Tree transactions are modified according to header table and a new FP tree is formed.
+	Once FP tree is created, branching is checked.
+	If no branches then - Permutations are done.
+	Otherwise this function is called again, with new header table.
+*/
 int file_counter = 0;
 void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
 	// index becomes length of new header table
@@ -453,59 +465,63 @@ void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
 		char str[10];
 		tostring(str, file_counter);
 		file_counter++;
+
+		/*
+			Temporary Files are created to manage state of transaction in recursion.
+			All states of transaction can be seen in the directory with files with prefix "temporary_set"
+		*/
 		char fileName[100] = "temporary_set";
 		strcat(fileName,str);
 		strcat(fileName,".txt");
-		// printf("%s\n", fileName);
+
 		FILE *fp = fopen(fileName, "w");
 
 		HEADERTABLE* newHeaderTable = (HEADERTABLE *)malloc(200000 * sizeof(HEADERTABLE));
-		// printf("$$ %s %d\n", headerTable[i].itemNode->item, headerTable[i].itemNode->frequency );
 		NODE* sameItemLinks = (NODE *)malloc(sizeof(NODE));
 		sameItemLinks = headerTable[i].itemNode;
+
 		int index=0;
 		HEADERTABLE* temporaryTable = (HEADERTABLE *)malloc(200000 * sizeof(HEADERTABLE));
 		// printf("\nStart\n");
 		int supportThreshold = SUPPORT * total_entries;
 		// if(sameItemLinks->frequency>=supportThreshold){
 		// if(headerTable[i].itemNode->frequency>=supportThreshold){
-		// 	finalResult = fopen("final_result.txt","a");
+		// 	finalResult = fopen("all_results.txt","a");
 		// 	// printf("'%s %d'\n", sameItemLinks->item, sameItemLinks->frequency);
 		// 	fprintf(finalResult, "%s %d\n", sameItemLinks->item, sameItemLinks->frequency);
 		// 	fclose(finalResult);
 		// }
-			while(sameItemLinks){
-				// printf("----------%s %d-------------\n",sameItemLinks->item, sameItemLinks->frequency);
-				NODE* treeLinks = (NODE *)malloc(sizeof(NODE));
+		while(sameItemLinks){
+			// printf("----------%s %d-------------\n",sameItemLinks->item, sameItemLinks->frequency);
+			NODE* treeLinks = (NODE *)malloc(sizeof(NODE));
 
-				treeLinks = sameItemLinks->parent;
-				int l = 0;
-				// printf("** %d #%s#\n", treeLinks->frequency, treeLinks->item);
-				if(strcmp(treeLinks->item,"")==0 && sameItemLinks->frequency>supportThreshold){
-					finalResult = fopen("final_result.txt","a");
-					// printf("'%s %d'\n", sameItemLinks->item, sameItemLinks->frequency);
-					// fprintf(finalResult, "%s %d\n", sameItemLinks->item, sameItemLinks->frequency);
-					fclose(finalResult);
-					// break;
-				}
-				else{
-					while(strcmp(treeLinks->item,"")!=0){
-						// printf("*** %s #%s# %d %d ***\n",treeLinks->item, treeLinks->parent->item, treeLinks->frequency, l);
-						if (strcmp(treeLinks->parent->item,"")!=0){
-							fprintf(fp, "%s,", treeLinks->item);
-							index = NewHeaderTable(temporaryTable , treeLinks->item, index, sameItemLinks->frequency, sameItemLinks->item);
-							treeLinks = treeLinks->parent;
-						}
-						else{
-							fprintf(fp, "%s\n", treeLinks->item);
-							index = NewHeaderTable(temporaryTable , treeLinks->item, index, sameItemLinks->frequency, sameItemLinks->item);
-							break;
-						}
+			treeLinks = sameItemLinks->parent;
+			int l = 0;
+			// printf("** %d #%s#\n", treeLinks->frequency, treeLinks->item);
+			if(strcmp(treeLinks->item,"")==0 && sameItemLinks->frequency>supportThreshold){
+				finalResult = fopen("all_results.txt","a");
+				// printf("'%s %d'\n", sameItemLinks->item, sameItemLinks->frequency);
+				// fprintf(finalResult, "%s %d\n", sameItemLinks->item, sameItemLinks->frequency);
+				fclose(finalResult);
+				// break;
+			}
+			else{
+				while(strcmp(treeLinks->item,"")!=0){
+					// printf("*** %s #%s# %d %d ***\n",treeLinks->item, treeLinks->parent->item, treeLinks->frequency, l);
+					if (strcmp(treeLinks->parent->item,"")!=0){
+						fprintf(fp, "%s,", treeLinks->item);
+						index = NewHeaderTable(temporaryTable , treeLinks->item, index, sameItemLinks->frequency, sameItemLinks->item);
+						treeLinks = treeLinks->parent;
+					}
+					else{
+						fprintf(fp, "%s\n", treeLinks->item);
+						index = NewHeaderTable(temporaryTable , treeLinks->item, index, sameItemLinks->frequency, sameItemLinks->item);
+						break;
 					}
 				}
-				sameItemLinks = sameItemLinks->nextSameItem;
 			}
-		// }
+			sameItemLinks = sameItemLinks->nextSameItem;
+		}
 
 		fclose(fp);
 
@@ -524,10 +540,11 @@ void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
 			}
 			else break;
 	    }
-	    if(k) printf("\nNew Header Table - \n");
+	    if(k) printf("________________________\nNEW HEADER TABLE: - \n");
 	    for(j = 0;j<k;j++){
 			printf("%s %d\n", newHeaderTable[j].item, newHeaderTable[j].frequency);
 	    }
+	    if(k) printf("*************************\n\n");
 
 	    free(temporaryTable);
 		if(k){
@@ -542,35 +559,53 @@ void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
 int main(){
 	char fileName[] = "groceries_subset.csv";
 	printf("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
-	FILE *finR = fopen("final_result.txt", "w");
+	
+	// Removing Content from Files
+	FILE *finR = fopen("all_results.txt", "w");
+	FILE *in = fopen("initial_transactions_modified.txt", "w");
+	fclose(in);
 	fclose(finR);
+
 	HEADERTABLE* headerTable = (HEADERTABLE *)malloc(200000 * sizeof(HEADERTABLE));
 	int lengthOfTable, i;
+
 	lengthOfTable = MakeHeaderTable(fileName, headerTable);
+
+	/*
+		Printing Contents of initial Header Table
+	*/
 	for ( i=0; i<lengthOfTable; i++ ){
-		finalResult = fopen("final_result.txt","a");
+		finalResult = fopen("all_results.txt","a");
 			// printf("'%s %d'\n", sameItemLinks->item, sameItemLinks->frequency);
 		fprintf(finalResult, "%d^ %s\n", headerTable[i].frequency,headerTable[i].item);
 		fclose(finalResult);
 		printf("%s %d\n", headerTable[i].item, headerTable[i].frequency);
 	}
+	/*
+		Create Root and make FP tree using the Created Header Table
+	*/
 	NODE* root = (NODE*)malloc(sizeof(NODE));
 	root = NewNode("", 1);
+
 	MakeTree(fileName, headerTable, lengthOfTable, root, 0, NULL);
 
 	// printf("ROOT- %s %d #%s# $%d$\n", root->item, root->frequency, root->child->next->item, root->child->next->frequency);
 
+	/*
+		Start Mining Item by expanding nodes from the FP Tree.
+		This is done by using links from the Header Table to THe FP tree.
+	*/
 	MineFrequentItemsets(headerTable, lengthOfTable);
+	
 	fclose(finalResult);
 
 	/*
-	FILE HANDLING
+		FILE HANDLING to remove duplicate entries
 	*/
-
 	int supportThreshold = total_entries * SUPPORT;
 
-	FILE* allResults = fopen("final_result.txt","r");
-	FILE* frequentItemsets = fopen("frequent_itemsets_first.txt","w");
+	FILE* allResults = fopen("all_results.txt","r");
+	FILE* frequentItemsets = fopen("FREQUENT_ITEMSETS.txt","w");
 	char str[1000], str2[1000]="";
 	int prevNum =0, number = 0, done=0 ;
 	while(fscanf(allResults," %[^\n]s",str) == 1){
@@ -595,7 +630,7 @@ int main(){
 			if(!done){
 				prevNum += number;
 				if(prevNum> supportThreshold){
-					printf("%d %s\n",prevNum, str);
+					// printf("%d %s\n",prevNum, str);
 					char tostr[20];
 					tostring(tostr, prevNum);
 					strcat(tostr,"^");
@@ -638,6 +673,6 @@ int main(){
 	fclose(frequentItemsets);
 	fclose(allResults);
 
-	
-
+	printf("\n\n\nInitial Transactions after validating with Header Table can be found in 'initial_transactions_modified.txt'\n");
+	printf("\nFinal Itemsets can be found in 'FREQUENT_ITEMSETS.txt'\n");
 }
