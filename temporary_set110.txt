@@ -1,0 +1,16 @@
+beef,whipped/sour cream,rolls/buns
+dessert
+other vegetables
+canned beer,rolls/buns
+white bread,sausage,other vegetables
+hygiene articles,pork
+specialty bar,packaged fruit/vegetables,salty snack,berries,fruit/vegetable juice,whole milk
+sugar
+packaged fruit/vegetables,frozen vegetables,bottled beer,root vegetables,yogurt,soda
+sliced cheese,dessert,packaged fruit/vegetables,beef,frankfurter,sausage,root vegetables,yogurt,soda,rolls/buns,whole milk
+rolls/buns
+hard cheese,hygiene articles,frozen vegetables,fruit/vegetable juice,coffee,pastry,tropical fruit,yogurt,other vegetables,whole milk
+frozen vegetables,tropical fruit,root vegetables,bottled water
+grapes,misc. beverages,dessert,butter,berries,fruit/vegetable juice,whipped/sour cream,canned beer,pastry,tropical fruit,yogurt,bottled water,other vegetables,whole milk
+newspapers
+pork,beef,newspapers,rolls/buns

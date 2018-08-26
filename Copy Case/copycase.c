@@ -2,7 +2,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-# define SUPPORT 0.02
+# define SUPPORT 0.05
 
 int sa = 0;
 int total_entries = 0;
@@ -271,7 +271,7 @@ void grayCode(TRANSACTION* transaction, int N, char item[], int frequency) {
             binary[i] /= 10;
         }
         //printf("\n");
-        finalResult = fopen("final_result.txt","a");
+        finalResult = fopen("results.txt","a");
         // fprintf(finalResult, "t is %s-%s\n",t, item );
         if(strcmp(t,item)!=0 && strcmp(t,"")!=0){
 	        strcat(t, ",");
@@ -317,7 +317,6 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 	char transaction[20000];
 	fp = fopen(fileName, "r");
 	int row = 0, i;
-	FILE *fp2 = fopen("initial_tree.txt", "a");
 
 	while(fscanf(fp," %[^\n]s",transaction) == 1){
 		int total = 0;
@@ -373,10 +372,8 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 		else{
 			for ( i=0; i<total; i++ ){
 				// printf("(%s-%d) ", singleTransaction[i].item, singleTransaction[i].frequency);
-				fprintf(fp2, "(%s-%d) ", singleTransaction[i].item, singleTransaction[i].frequency);
 			}
 			// printf("\n");
-			fprintf(fp2,"\n");
 		}
 		// printf("%d %d ****\n", total, lengthOfTable);
 
@@ -399,7 +396,6 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 
         // if(row == 9) break;
     }
-			fclose(fp2);
 
 }
 
@@ -482,7 +478,7 @@ void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
 				int l = 0;
 				// printf("** %d #%s#\n", treeLinks->frequency, treeLinks->item);
 				if(strcmp(treeLinks->item,"")==0 && sameItemLinks->frequency>supportThreshold){
-					finalResult = fopen("final_result.txt","a");
+					finalResult = fopen("results.txt","a");
 					// printf("'%s %d'\n", sameItemLinks->item, sameItemLinks->frequency);
 					// fprintf(finalResult, "%s %d\n", sameItemLinks->item, sameItemLinks->frequency);
 					fclose(finalResult);
@@ -542,13 +538,13 @@ void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
 int main(){
 	char fileName[] = "groceries_subset.csv";
 	printf("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
-	FILE *finR = fopen("final_result.txt", "w");
+	FILE *finR = fopen("results.txt", "w");
 	fclose(finR);
 	HEADERTABLE* headerTable = (HEADERTABLE *)malloc(200000 * sizeof(HEADERTABLE));
 	int lengthOfTable, i;
 	lengthOfTable = MakeHeaderTable(fileName, headerTable);
 	for ( i=0; i<lengthOfTable; i++ ){
-		finalResult = fopen("final_result.txt","a");
+		finalResult = fopen("results.txt","a");
 			// printf("'%s %d'\n", sameItemLinks->item, sameItemLinks->frequency);
 		fprintf(finalResult, "%d^ %s\n", headerTable[i].frequency,headerTable[i].item);
 		fclose(finalResult);
@@ -569,8 +565,8 @@ int main(){
 
 	int supportThreshold = total_entries * SUPPORT;
 
-	FILE* allResults = fopen("final_result.txt","r");
-	FILE* frequentItemsets = fopen("frequent_itemsets_first.txt","w");
+	FILE* allResults = fopen("results.txt","r");
+	FILE* frequentItemsets = fopen("frequent_itemsets.txt","w");
 	char str[1000], str2[1000]="";
 	int prevNum =0, number = 0, done=0 ;
 	while(fscanf(allResults," %[^\n]s",str) == 1){

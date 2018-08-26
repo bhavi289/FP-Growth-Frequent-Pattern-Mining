@@ -1,0 +1,27 @@
+pastry
+cream cheese ,newspapers,yogurt,bottled water,soda,rolls/buns
+curd,pastry,citrus fruit,whole milk
+cream cheese ,citrus fruit,yogurt
+sausage,rolls/buns
+detergent,yogurt,soda
+salty snack,curd
+beverages,beef,whipped/sour cream,sausage,citrus fruit,other vegetables,rolls/buns,whole milk
+dessert,beverages,cream cheese ,brown bread,curd,citrus fruit,bottled water,other vegetables,rolls/buns
+hygiene articles,whipped/sour cream,tropical fruit,root vegetables,whole milk
+detergent,cream cheese ,berries,margarine,curd,root vegetables,other vegetables
+frankfurter,whole milk
+bottled water,other vegetables
+tropical fruit,bottled water,rolls/buns
+yogurt
+sliced cheese,fruit/vegetable juice,coffee,shopping bags,yogurt,rolls/buns,whole milk
+sliced cheese,dessert,white bread,chocolate,cream cheese ,pip fruit,whipped/sour cream,curd,coffee,whole milk
+sugar,hygiene articles,berries,fruit/vegetable juice,citrus fruit,other vegetables
+pip fruit,pork,whole milk
+sliced cheese,margarine,fruit/vegetable juice,beef,citrus fruit,bottled water,other vegetables,rolls/buns
+frankfurter,shopping bags,citrus fruit,rolls/buns
+beverages,curd,yogurt
+cream cheese ,pip fruit,other vegetables,rolls/buns
+brown bread,margarine,frankfurter,bottled water,soda,other vegetables
+chicken,cream cheese ,sugar,domestic eggs,pork,frankfurter,whipped/sour cream,citrus fruit,other vegetables,rolls/buns,whole milk
+sliced cheese,curd,coffee,yogurt
+salty snack,other vegetables

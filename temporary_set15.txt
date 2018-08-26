@@ -1,0 +1,26 @@
+whole milk
+bottled water,whole milk
+bottled water
+soda,whole milk
+bottled water,soda,rolls/buns
+rolls/buns
+soda
+other vegetables
+other vegetables,whole milk
+bottled water,soda
+soda,other vegetables
+rolls/buns,whole milk
+bottled water,rolls/buns,whole milk
+bottled water,soda,other vegetables,rolls/buns,whole milk
+bottled water,other vegetables,rolls/buns,whole milk
+soda,other vegetables,rolls/buns,whole milk
+bottled water,other vegetables
+soda,rolls/buns
+other vegetables,rolls/buns
+bottled water,soda,whole milk
+bottled water,soda,other vegetables,whole milk
+bottled water,rolls/buns
+bottled water,other vegetables,rolls/buns
+soda,rolls/buns,whole milk
+bottled water,soda,rolls/buns,whole milk
+bottled water,other vegetables,whole milk

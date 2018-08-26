@@ -1,0 +1,39 @@
+butter,fruit/vegetable juice,newspapers
+root vegetables,other vegetables,whole milk
+brown bread,domestic eggs,coffee,pastry,tropical fruit,root vegetables,yogurt,soda,whole milk
+pastry,rolls/buns
+brown bread,frankfurter,tropical fruit,rolls/buns
+other vegetables,rolls/buns,whole milk
+bottled beer,bottled water,soda
+hygiene articles,domestic eggs,fruit/vegetable juice,frankfurter,sausage,citrus fruit,tropical fruit,whole milk
+pip fruit,frozen vegetables,frankfurter,other vegetables,rolls/buns,whole milk
+bottled water,soda,rolls/buns,whole milk
+butter,domestic eggs,fruit/vegetable juice,frankfurter,whipped/sour cream,curd,bottled beer,tropical fruit,root vegetables,yogurt,other vegetables,whole milk
+margarine,frankfurter,citrus fruit
+coffee,shopping bags
+napkins,hygiene articles,whipped/sour cream,curd,citrus fruit,yogurt,rolls/buns,whole milk
+margarine,curd,pastry,newspapers,citrus fruit
+napkins,hygiene articles,domestic eggs,tropical fruit,soda,other vegetables,whole milk
+frankfurter,citrus fruit,soda,other vegetables,rolls/buns,whole milk
+citrus fruit
+brown bread,pork,pastry,citrus fruit
+beef,root vegetables,other vegetables,rolls/buns
+bottled beer,soda
+hygiene articles,brown bread
+hygiene articles,berries,fruit/vegetable juice,citrus fruit,other vegetables
+pork,curd,bottled water,soda,other vegetables,whole milk
+berries,brown bread,beef,coffee,citrus fruit
+butter,whipped/sour cream,soda,other vegetables
+pip fruit,coffee,pastry,sausage,tropical fruit
+napkins,fruit/vegetable juice,frankfurter,pastry,yogurt,soda,rolls/buns,whole milk
+domestic eggs,pork,frankfurter,whipped/sour cream,citrus fruit,other vegetables,rolls/buns,whole milk
+butter,pork,whipped/sour cream,curd,yogurt,whole milk
+butter,whipped/sour cream,coffee,citrus fruit,soda,other vegetables,whole milk
+frozen vegetables,domestic eggs,curd,newspapers,other vegetables,whole milk
+pip fruit,butter,margarine,tropical fruit,root vegetables,other vegetables,rolls/buns
+berries,whipped/sour cream,pastry,sausage,citrus fruit,tropical fruit,whole milk
+hygiene articles
+butter,frankfurter,curd,whole milk
+berries,coffee,shopping bags,root vegetables,whole milk
+curd,yogurt
+napkins,domestic eggs,pork,whipped/sour cream,curd,coffee,yogurt,whole milk

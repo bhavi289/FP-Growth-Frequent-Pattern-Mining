@@ -1,0 +1,25 @@
+bottled water
+shopping bags,newspapers,soda
+shopping bags,sausage,soda,rolls/buns
+shopping bags,sausage,rolls/buns
+other vegetables
+rolls/buns
+newspapers,bottled water,other vegetables,whole milk
+root vegetables,yogurt,rolls/buns
+coffee,sausage,citrus fruit,yogurt,soda
+sausage,citrus fruit,whole milk
+bottled beer,bottled water,rolls/buns
+newspapers,soda
+whole milk
+citrus fruit,rolls/buns
+pastry
+root vegetables,other vegetables
+soda
+bottled water,soda
+shopping bags,soda,rolls/buns
+citrus fruit,yogurt,rolls/buns,whole milk
+coffee,yogurt,whole milk
+shopping bags,soda
+bottled beer,citrus fruit,soda
+pastry,tropical fruit,yogurt,bottled water,other vegetables,whole milk
+pastry,tropical fruit

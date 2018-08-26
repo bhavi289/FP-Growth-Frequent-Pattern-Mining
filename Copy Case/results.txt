@@ -1,0 +1,41 @@
+269^ whole milk
+222^ rolls/buns
+186^ other vegetables
+159^ soda
+132^ bottled water
+127^ yogurt
+110^ root vegetables
+97^ tropical fruit
+95^ citrus fruit
+89^ newspapers
+78^ sausage
+78^ pastry
+78^ shopping bags
+76^ coffee
+76^ bottled beer
+76^ canned beer
+75^ curd
+74^ whipped/sour cream
+73^ frankfurter
+69^ beef
+67^ fruit/vegetable juice
+56^ margarine
+53^ pork
+53^ domestic eggs
+154^ whole milk,rolls/buns 
+51^ whole milk,other vegetables 
+51^ whole milk,other vegetables 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 
+31^ whole milk,yogurt 

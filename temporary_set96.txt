@@ -1,0 +1,33 @@
+frozen vegetables,root vegetables
+sausage,root vegetables,yogurt,rolls/buns
+chocolate,hamburger meat,berries,pork,whipped/sour cream,coffee,citrus fruit
+hamburger meat,citrus fruit,bottled water,rolls/buns
+frankfurter,tropical fruit
+pip fruit,sugar,napkins,hygiene articles,domestic eggs,tropical fruit,soda,other vegetables,whole milk
+sugar,frankfurter,citrus fruit,soda,other vegetables,rolls/buns,whole milk
+newspapers,soda
+napkins,frozen vegetables,butter,whipped/sour cream
+whole milk
+shopping bags,citrus fruit,tropical fruit,other vegetables
+napkins,pastry,bottled water,soda,other vegetables
+beef,tropical fruit,root vegetables,soda,other vegetables
+hygiene articles,butter,pork,pastry,rolls/buns,whole milk
+fruit/vegetable juice
+frankfurter,canned beer,root vegetables,other vegetables
+domestic eggs,curd,coffee,sausage,yogurt
+berries,beef,rolls/buns
+brown bread,other vegetables,whole milk
+butter,tropical fruit,whole milk
+bottled beer,whole milk
+hygiene articles
+pork,frankfurter,citrus fruit,root vegetables,bottled water,other vegetables
+other vegetables
+frozen vegetables,berries,margarine,curd,citrus fruit,yogurt,soda,rolls/buns,whole milk
+packaged fruit/vegetables,frozen vegetables,whipped/sour cream,root vegetables,soda,other vegetables,rolls/buns,whole milk
+curd,canned beer,citrus fruit,yogurt,rolls/buns,whole milk
+fruit/vegetable juice,beef,curd,citrus fruit,root vegetables,rolls/buns
+coffee,root vegetables,yogurt,bottled water,rolls/buns
+bottled beer
+white bread,domestic eggs,coffee,bottled water,rolls/buns,whole milk
+butter,frankfurter,bottled beer,coffee,rolls/buns
+citrus fruit

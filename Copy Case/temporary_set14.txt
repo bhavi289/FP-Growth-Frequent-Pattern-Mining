@@ -1,0 +1,47 @@
+other vegetables,rolls/buns
+bottled water
+bottled water,soda
+coffee,shopping bags,sausage,yogurt,whole milk
+sausage,root vegetables,other vegetables,rolls/buns
+rolls/buns,whole milk
+root vegetables,yogurt,other vegetables,whole milk
+other vegetables
+tropical fruit,other vegetables,whole milk
+soda
+tropical fruit,root vegetables,yogurt,other vegetables,whole milk
+sausage
+bottled water,soda,other vegetables,whole milk
+root vegetables,bottled water,whole milk
+tropical fruit,whole milk
+rolls/buns
+coffee,pastry,rolls/buns
+bottled water,other vegetables,rolls/buns,whole milk
+bottled water,rolls/buns
+bottled water,whole milk
+root vegetables,bottled water,soda
+soda,other vegetables
+newspapers
+sausage,newspapers,yogurt,soda,other vegetables,rolls/buns,whole milk
+tropical fruit,yogurt,bottled water,rolls/buns
+coffee,newspapers,whole milk
+citrus fruit
+newspapers,rolls/buns
+yogurt,whole milk
+whole milk
+sausage,root vegetables,other vegetables,whole milk
+newspapers,tropical fruit,rolls/buns
+root vegetables,yogurt,soda
+other vegetables,whole milk
+citrus fruit,root vegetables,bottled water,whole milk
+citrus fruit,bottled water,whole milk
+root vegetables,other vegetables
+shopping bags,root vegetables
+bottled water,soda,other vegetables,rolls/buns,whole milk
+shopping bags,tropical fruit,root vegetables,yogurt,bottled water,other vegetables,rolls/buns,whole milk
+shopping bags
+newspapers,whole milk
+pastry,soda
+citrus fruit,soda
+citrus fruit,yogurt,other vegetables,whole milk
+yogurt
+coffee,rolls/buns

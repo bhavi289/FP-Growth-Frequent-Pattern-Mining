@@ -264,22 +264,16 @@ void grayCode(TRANSACTION* transaction, int N, char item[], int frequency) {
         //printf("{ ");
         for (j = 0; j < N; j++) {
             if (binary[i] % 10 == 1){
-            	if(strcmp(t, transaction->item)!=0)
             	strcat(t,transaction->item);
                 //printf("%s", set[j]);
             }
             binary[i] /= 10;
         }
         //printf("\n");
-        finalResult = fopen("final_result.txt","a");
-        // fprintf(finalResult, "t is %s-%s\n",t, item );
-        if(strcmp(t,item)!=0 && strcmp(t,"")!=0){
-	        strcat(t, ",");
-	        strcat(t,item);
-	        fprintf(finalResult, "%d^ %s \n",frequency, t );
-	    }	
-		
-
+        strcat(t, ",");
+        strcat(t,item);
+		finalResult = fopen("final_result.txt","a");
+        fprintf(finalResult, "%s %d (%s)\n", t, frequency, item );
         fclose(finalResult);
         // printf("(%s) %s - %d\n",transaction->item, t);
     }
@@ -317,7 +311,6 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 	char transaction[20000];
 	fp = fopen(fileName, "r");
 	int row = 0, i;
-	FILE *fp2 = fopen("initial_tree.txt", "a");
 
 	while(fscanf(fp," %[^\n]s",transaction) == 1){
 		int total = 0;
@@ -373,10 +366,8 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 		else{
 			for ( i=0; i<total; i++ ){
 				// printf("(%s-%d) ", singleTransaction[i].item, singleTransaction[i].frequency);
-				fprintf(fp2, "(%s-%d) ", singleTransaction[i].item, singleTransaction[i].frequency);
 			}
 			// printf("\n");
-			fprintf(fp2,"\n");
 		}
 		// printf("%d %d ****\n", total, lengthOfTable);
 
@@ -384,7 +375,7 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 		// printf("lengthOfTable %d\n", lengthOfTable);
 		if(mode && total){
 			if(check){
-				// printf("recurse\n");
+				printf("recurse\n");
 				MineFrequentItemsets(headerTable, total);
 				// return;
 				// recurse
@@ -399,7 +390,6 @@ void MakeTree(char fileName[], HEADERTABLE* headerTable, int lengthOfTable, NODE
 
         // if(row == 9) break;
     }
-			fclose(fp2);
 
 }
 
@@ -460,7 +450,7 @@ void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
 		FILE *fp = fopen(fileName, "w");
 
 		HEADERTABLE* newHeaderTable = (HEADERTABLE *)malloc(200000 * sizeof(HEADERTABLE));
-		// printf("$$ %s %d\n", headerTable[i].itemNode->item, headerTable[i].itemNode->frequency );
+		printf("$$ %s %d\n", headerTable[i].itemNode->item, headerTable[i].itemNode->frequency );
 		NODE* sameItemLinks = (NODE *)malloc(sizeof(NODE));
 		sameItemLinks = headerTable[i].itemNode;
 		int index=0;
@@ -468,12 +458,7 @@ void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
 		// printf("\nStart\n");
 		int supportThreshold = SUPPORT * total_entries;
 		// if(sameItemLinks->frequency>=supportThreshold){
-		// if(headerTable[i].itemNode->frequency>=supportThreshold){
-		// 	finalResult = fopen("final_result.txt","a");
-		// 	// printf("'%s %d'\n", sameItemLinks->item, sameItemLinks->frequency);
-		// 	fprintf(finalResult, "%s %d\n", sameItemLinks->item, sameItemLinks->frequency);
-		// 	fclose(finalResult);
-		// }
+		
 			while(sameItemLinks){
 				// printf("----------%s %d-------------\n",sameItemLinks->item, sameItemLinks->frequency);
 				NODE* treeLinks = (NODE *)malloc(sizeof(NODE));
@@ -484,7 +469,7 @@ void MineFrequentItemsets(HEADERTABLE* headerTable, int lengthOfTable){
 				if(strcmp(treeLinks->item,"")==0 && sameItemLinks->frequency>supportThreshold){
 					finalResult = fopen("final_result.txt","a");
 					// printf("'%s %d'\n", sameItemLinks->item, sameItemLinks->frequency);
-					// fprintf(finalResult, "%s %d\n", sameItemLinks->item, sameItemLinks->frequency);
+					fprintf(finalResult, "%s %d\n", sameItemLinks->item, sameItemLinks->frequency);
 					fclose(finalResult);
 					// break;
 				}
@@ -550,7 +535,7 @@ int main(){
 	for ( i=0; i<lengthOfTable; i++ ){
 		finalResult = fopen("final_result.txt","a");
 			// printf("'%s %d'\n", sameItemLinks->item, sameItemLinks->frequency);
-		fprintf(finalResult, "%d^ %s\n", headerTable[i].frequency,headerTable[i].item);
+		fprintf(finalResult, "%s %d\n", headerTable[i].item, headerTable[i].frequency);
 		fclose(finalResult);
 		printf("%s %d\n", headerTable[i].item, headerTable[i].frequency);
 	}
@@ -561,83 +546,5 @@ int main(){
 	// printf("ROOT- %s %d #%s# $%d$\n", root->item, root->frequency, root->child->next->item, root->child->next->frequency);
 
 	MineFrequentItemsets(headerTable, lengthOfTable);
-	fclose(finalResult);
-
-	/*
-	FILE HANDLING
-	*/
-
-	int supportThreshold = total_entries * SUPPORT;
-
-	FILE* allResults = fopen("final_result.txt","r");
-	FILE* frequentItemsets = fopen("frequent_itemsets_first.txt","w");
-	char str[1000], str2[1000]="";
-	int prevNum =0, number = 0, done=0 ;
-	while(fscanf(allResults," %[^\n]s",str) == 1){
-		int check = 0;
-		if(strcmp(str2, str)!=0){
-			int x =0, flag = 0;
-			number = 0;
-			for(x=0; x<strlen(str); x++){
-				if(str[x]!='^' && !flag){
-					number = number*10 + (str[x] - '0');
-				}
-				else{
-					if(number>supportThreshold){
-						fprintf(frequentItemsets, "%s\n", str);
-					}
-						break;
-
-				} 
-			}
-		}
-		if(strcmp(str2, str)==0 && number<supportThreshold){
-			if(!done){
-				prevNum += number;
-				if(prevNum> supportThreshold){
-					printf("%d %s\n",prevNum, str);
-					char tostr[20];
-					tostring(tostr, prevNum);
-					strcat(tostr,"^");
-					int len = strlen(tostr);
-					int x, check2 = 0;
-					for(x = 0;x< strlen(str);x++){
-						// printf("%c", str[x]);
-						if(str[x]=='^'){
-							check2 = 1;
-						}
-						else if(check2){
-							tostr[len++] = str[x];
-							// fprintf(frequentItemsets, "%s\n",tostr );
-						}
-					}
-					tostr[len++] = '\0';
-					fprintf(frequentItemsets, "%s\n", tostr );
-					done = 1;
-				}
-			}
-		}
-		else{
-			done = 0;
-			int x =0, flag = 0;
-			 number = 0;
-			for(x=0; x<strlen(str); x++){
-				if(str[x]!='^' && !flag){
-					number = number*10 + (str[x] - '0');
-				}
-				else{
-					prevNum = number;
-					flag=1;
-
-				} 
-			}
-			strcpy(str2, str);
-		}
-
-	}
-	fclose(frequentItemsets);
-	fclose(allResults);
-
-	
-
+	// fclose(finalResult);
 }

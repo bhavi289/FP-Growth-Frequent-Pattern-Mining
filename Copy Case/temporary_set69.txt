@@ -1,0 +1,47 @@
+tropical fruit,yogurt
+pastry,tropical fruit,root vegetables,yogurt,soda,whole milk
+newspapers
+citrus fruit
+bottled beer,shopping bags,sausage,yogurt,whole milk
+shopping bags,pastry,other vegetables
+tropical fruit,other vegetables
+shopping bags
+sausage
+sausage,citrus fruit,yogurt,soda
+pastry,rolls/buns
+root vegetables
+sausage,whole milk
+shopping bags,yogurt,rolls/buns,whole milk
+soda
+newspapers,other vegetables,rolls/buns,whole milk
+whole milk
+tropical fruit,rolls/buns
+shopping bags,tropical fruit,root vegetables,bottled water
+newspapers,soda,whole milk
+tropical fruit,root vegetables,whole milk
+shopping bags,rolls/buns
+rolls/buns,whole milk
+newspapers,whole milk
+sausage,yogurt
+newspapers,rolls/buns,whole milk
+pastry,sausage,tropical fruit
+pastry,yogurt
+sausage,rolls/buns,whole milk
+pastry
+rolls/buns
+root vegetables,whole milk
+pastry,whole milk
+shopping bags,other vegetables,whole milk
+root vegetables,other vegetables,whole milk
+citrus fruit,soda,other vegetables,whole milk
+yogurt,whole milk
+yogurt,other vegetables,whole milk
+yogurt
+root vegetables,yogurt,bottled water,rolls/buns
+pastry,tropical fruit,yogurt,other vegetables,whole milk
+shopping bags,citrus fruit,whole milk
+newspapers,bottled water,whole milk
+shopping bags,root vegetables,whole milk
+bottled water,rolls/buns,whole milk
+pastry,tropical fruit,root vegetables,yogurt,other vegetables
+pastry,newspapers,citrus fruit,yogurt,other vegetables,whole milk

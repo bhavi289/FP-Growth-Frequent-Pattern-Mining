@@ -1,0 +1,54 @@
+whipped/sour cream,rolls/buns
+sausage,whole milk
+citrus fruit,root vegetables
+root vegetables,whole milk
+sausage,rolls/buns,whole milk
+whipped/sour cream,sausage,citrus fruit,other vegetables,rolls/buns,whole milk
+sausage,rolls/buns
+frankfurter,bottled beer,root vegetables,bottled water,whole milk
+whipped/sour cream,root vegetables,whole milk
+citrus fruit,yogurt,other vegetables
+frankfurter,curd,canned beer,root vegetables,yogurt,rolls/buns
+pastry
+coffee,newspapers,other vegetables,rolls/buns,whole milk
+tropical fruit,root vegetables,soda,other vegetables
+shopping bags,other vegetables,rolls/buns,whole milk
+root vegetables,other vegetables,rolls/buns
+root vegetables
+sausage,root vegetables,rolls/buns
+coffee,newspapers,soda,whole milk
+whipped/sour cream,curd,tropical fruit,yogurt,whole milk
+citrus fruit,whole milk
+curd,newspapers,citrus fruit,rolls/buns
+citrus fruit,root vegetables,other vegetables,whole milk
+citrus fruit,tropical fruit,yogurt,bottled water,rolls/buns
+coffee,citrus fruit
+coffee,rolls/buns,whole milk
+citrus fruit,other vegetables,rolls/buns
+citrus fruit,bottled water,other vegetables,rolls/buns
+pastry,citrus fruit,rolls/buns,whole milk
+shopping bags,pastry,other vegetables,whole milk
+newspapers,whole milk
+rolls/buns
+frankfurter
+root vegetables,rolls/buns
+other vegetables,rolls/buns,whole milk
+bottled beer,rolls/buns
+tropical fruit,root vegetables,yogurt
+bottled beer,bottled water,whole milk
+other vegetables,whole milk
+sausage,other vegetables
+sausage,newspapers,root vegetables,bottled water,rolls/buns,whole milk
+coffee,pastry,whole milk
+coffee,root vegetables,other vegetables,whole milk
+whipped/sour cream,coffee,tropical fruit,other vegetables
+frankfurter,tropical fruit,root vegetables,whole milk
+curd,citrus fruit,root vegetables,rolls/buns
+other vegetables
+bottled beer,shopping bags,root vegetables
+bottled beer,shopping bags,tropical fruit,root vegetables,yogurt,bottled water,other vegetables,rolls/buns,whole milk
+frankfurter,sausage,root vegetables,yogurt,soda,rolls/buns,whole milk
+canned beer
+whipped/sour cream,pastry,shopping bags,newspapers,yogurt,bottled water
+newspapers,yogurt,rolls/buns,whole milk
+newspapers,rolls/buns

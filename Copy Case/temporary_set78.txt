@@ -1,0 +1,51 @@
+citrus fruit
+fruit/vegetable juice,curd,tropical fruit,other vegetables
+whole milk
+fruit/vegetable juice,root vegetables,rolls/buns,whole milk
+newspapers,bottled water,rolls/buns,whole milk
+coffee,shopping bags,pastry,other vegetables
+frankfurter,sausage,rolls/buns,whole milk
+newspapers,citrus fruit
+frankfurter,shopping bags,tropical fruit,whole milk
+frankfurter,citrus fruit
+beef,sausage,rolls/buns,whole milk
+whipped/sour cream,whole milk
+curd,pastry,newspapers,citrus fruit
+frankfurter,whipped/sour cream,sausage,rolls/buns
+tropical fruit
+citrus fruit,root vegetables,other vegetables,whole milk
+fruit/vegetable juice,curd,pastry,yogurt,bottled water,other vegetables,rolls/buns,whole milk
+whipped/sour cream,root vegetables,yogurt,other vegetables,whole milk
+curd,root vegetables,other vegetables
+root vegetables
+bottled beer,bottled water,other vegetables,rolls/buns,whole milk
+beef,coffee,newspapers,other vegetables,rolls/buns,whole milk
+beef,shopping bags,other vegetables,rolls/buns,whole milk
+frankfurter
+other vegetables
+fruit/vegetable juice,yogurt,bottled water,whole milk
+root vegetables,other vegetables
+frankfurter,bottled beer,rolls/buns,whole milk
+beef,curd,newspapers,citrus fruit,rolls/buns
+fruit/vegetable juice,beef,citrus fruit,bottled water,other vegetables,rolls/buns
+shopping bags,whole milk
+newspapers,bottled water,whole milk
+curd,yogurt,other vegetables
+frankfurter,shopping bags,pastry,citrus fruit
+beef,root vegetables,rolls/buns
+frankfurter,bottled water,soda,other vegetables
+bottled beer,other vegetables,whole milk
+curd,citrus fruit,yogurt,soda,rolls/buns,whole milk
+yogurt,bottled water,whole milk
+frankfurter,bottled water,rolls/buns,whole milk
+shopping bags,citrus fruit,tropical fruit,yogurt,bottled water,soda,rolls/buns
+fruit/vegetable juice,newspapers,tropical fruit,rolls/buns,whole milk
+frankfurter,sausage
+pastry,newspapers,citrus fruit,rolls/buns,whole milk
+fruit/vegetable juice,beef,whipped/sour cream,coffee,tropical fruit,other vegetables
+newspapers,other vegetables,rolls/buns,whole milk
+tropical fruit,root vegetables,other vegetables,rolls/buns
+fruit/vegetable juice,whipped/sour cream,shopping bags,whole milk
+curd,canned beer,bottled water
+whipped/sour cream,sausage,pastry,citrus fruit,yogurt,other vegetables,whole milk
+tropical fruit,yogurt,other vegetables

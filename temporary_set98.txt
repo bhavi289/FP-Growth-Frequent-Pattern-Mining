@@ -1,0 +1,31 @@
+tropical fruit
+hamburger meat,butter,citrus fruit,tropical fruit,root vegetables,other vegetables
+pip fruit,whipped/sour cream,yogurt,soda,other vegetables,rolls/buns,whole milk
+citrus fruit,tropical fruit,root vegetables,rolls/buns,whole milk
+napkins,canned beer,newspapers,bottled water,other vegetables,whole milk
+sausage,tropical fruit,root vegetables,yogurt,whole milk
+shopping bags,whole milk
+yogurt,rolls/buns
+pastry
+hamburger meat,napkins,whipped/sour cream,canned beer,soda
+butter,newspapers
+beef
+onions,brown bread,other vegetables,whole milk
+onions,hygiene articles
+cream cheese ,sugar,domestic eggs,pork,frankfurter,whipped/sour cream,citrus fruit,other vegetables,rolls/buns,whole milk
+packaged fruit/vegetables,frozen vegetables,fruit/vegetable juice,other vegetables
+onions,frozen vegetables,berries,margarine,curd,citrus fruit,yogurt,soda,rolls/buns,whole milk
+coffee,rolls/buns
+whipped/sour cream,whole milk
+white bread,butter,pork,whole milk
+packaged fruit/vegetables,sugar,pip fruit,butter,margarine,tropical fruit,root vegetables,other vegetables,rolls/buns
+pork,domestic eggs,fruit/vegetable juice,whipped/sour cream,bottled beer,bottled water,soda,other vegetables,rolls/buns,whole milk
+hamburger meat,pip fruit,brown bread,pork,fruit/vegetable juice,shopping bags,root vegetables,soda,other vegetables,whole milk
+beverages,berries,curd,sausage,citrus fruit,root vegetables
+hamburger meat,canned beer,newspapers,soda
+other vegetables
+frozen vegetables,brown bread,pork,bottled beer,newspapers,whole milk
+white bread,pork,whipped/sour cream,citrus fruit,other vegetables
+chocolate,salty snack,brown bread,pork,fruit/vegetable juice,frankfurter,coffee,pastry,tropical fruit,root vegetables,yogurt,other vegetables
+frozen vegetables,whipped/sour cream,bottled water,other vegetables
+white bread,pip fruit,napkins,frozen vegetables,butter,domestic eggs,fruit/vegetable juice,whipped/sour cream,tropical fruit,root vegetables,yogurt,bottled water,other vegetables,whole milk

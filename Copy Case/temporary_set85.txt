@@ -1,0 +1,44 @@
+yogurt,whole milk
+curd,citrus fruit,tropical fruit,yogurt,bottled water,whole milk
+fruit/vegetable juice,newspapers
+whipped/sour cream,curd,root vegetables,bottled water,other vegetables,rolls/buns
+margarine,whole milk
+citrus fruit,tropical fruit,root vegetables,other vegetables
+margarine,newspapers,citrus fruit
+rolls/buns,whole milk
+domestic eggs,fruit/vegetable juice,frankfurter,whipped/sour cream,curd,bottled beer,tropical fruit,root vegetables,yogurt,other vegetables,whole milk
+yogurt,bottled water,soda
+frankfurter,curd,sausage,root vegetables,rolls/buns
+other vegetables,rolls/buns
+beef,frankfurter,bottled beer,root vegetables,bottled water,whole milk
+margarine,frankfurter,whipped/sour cream,sausage,rolls/buns
+other vegetables
+root vegetables,whole milk
+brown bread,pork,frankfurter,sausage
+whipped/sour cream
+bottled beer,bottled water,whole milk
+pork,pastry,rolls/buns,whole milk
+whipped/sour cream,root vegetables,rolls/buns
+berries,citrus fruit,tropical fruit,root vegetables,bottled water,other vegetables,whole milk
+bottled water
+newspapers,root vegetables,whole milk
+whipped/sour cream,curd,citrus fruit,tropical fruit,whole milk
+whipped/sour cream,soda,other vegetables
+newspapers
+beef,frankfurter
+tropical fruit,whole milk
+domestic eggs,beef,other vegetables,rolls/buns,whole milk
+berries,pork,beef,sausage,newspapers,root vegetables,bottled water,rolls/buns,whole milk
+coffee,root vegetables,whole milk
+pork,whipped/sour cream,curd,yogurt,whole milk
+whipped/sour cream,bottled beer,citrus fruit,root vegetables,bottled water,whole milk
+domestic eggs,beef,coffee,root vegetables,other vegetables,whole milk
+pork,whole milk
+whipped/sour cream,coffee,citrus fruit,soda,other vegetables,whole milk
+berries,whipped/sour cream,tropical fruit,root vegetables,yogurt,whole milk
+margarine,tropical fruit,root vegetables,other vegetables,rolls/buns
+shopping bags,root vegetables,yogurt,whole milk
+frankfurter,curd,whole milk
+berries,fruit/vegetable juice,whipped/sour cream,canned beer,pastry,tropical fruit,yogurt,bottled water,other vegetables,whole milk
+frankfurter,bottled beer,coffee,rolls/buns
+domestic eggs,fruit/vegetable juice,whipped/sour cream,tropical fruit,root vegetables,yogurt,bottled water,other vegetables,whole milk

@@ -1,0 +1,28 @@
+yogurt,bottled water
+sugar,root vegetables,other vegetables,whole milk
+brown bread,shopping bags,yogurt,whole milk
+frozen vegetables,fruit/vegetable juice,bottled beer,root vegetables,yogurt,other vegetables,whole milk
+soda
+soda,whole milk
+beef,whipped/sour cream,sausage,citrus fruit,other vegetables,rolls/buns,whole milk
+cream cheese ,brown bread,curd,citrus fruit,bottled water,other vegetables,rolls/buns
+beef,sausage,rolls/buns
+root vegetables
+whole milk
+pip fruit,fruit/vegetable juice,citrus fruit,soda
+cream cheese ,curd,pastry,soda,rolls/buns
+onions,whole milk
+soda,rolls/buns
+shopping bags,tropical fruit,whole milk
+pastry,bottled water
+curd,yogurt
+pork,whipped/sour cream,whole milk
+rolls/buns
+bottled water
+pork,frankfurter
+chocolate,napkins,margarine,newspapers,other vegetables,rolls/buns,whole milk
+cream cheese ,whipped/sour cream,root vegetables
+berries,curd,sausage,citrus fruit,root vegetables
+coffee,yogurt
+berries,pork,whipped/sour cream,newspapers,soda
+sugar,berries,coffee,shopping bags,root vegetables,whole milk

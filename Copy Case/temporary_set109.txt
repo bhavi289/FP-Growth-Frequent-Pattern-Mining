@@ -1,0 +1,24 @@
+UHT-milk,long life bakery product,butter,whipped/sour cream,curd,root vegetables,bottled water,other vegetables,rolls/buns
+onions,frozen vegetables,root vegetables
+misc. beverages,cream cheese ,pip fruit,sugar,hygiene articles,domestic eggs,fruit/vegetable juice,frankfurter,sausage,citrus fruit,tropical fruit,whole milk
+butter milk,beverages,beef,whipped/sour cream,sausage,citrus fruit,other vegetables,rolls/buns,whole milk
+newspapers,bottled water,rolls/buns
+bottled beer
+candy,misc. beverages,chocolate,whipped/sour cream,soda,other vegetables,rolls/buns
+beverages,pip fruit,fruit/vegetable juice,citrus fruit,soda
+candy,onions,napkins,frozen vegetables,butter,whipped/sour cream
+salty snack,hamburger meat,shopping bags
+napkins,pastry
+packaged fruit/vegetables,tropical fruit,bottled water,other vegetables,whole milk
+bottled water,soda,other vegetables
+UHT-milk,pip fruit,napkins,hygiene articles,domestic eggs,frankfurter,curd,shopping bags,tropical fruit,rolls/buns
+pork,domestic eggs,fruit/vegetable juice,curd,tropical fruit,yogurt,whole milk
+whole milk
+candy,curd,sausage,newspapers,soda,other vegetables,whole milk
+butter,domestic eggs,beef,coffee,root vegetables,other vegetables,whole milk
+onions,fruit/vegetable juice,beef,curd,citrus fruit,root vegetables,rolls/buns
+sliced cheese,napkins,butter,berries,whipped/sour cream,tropical fruit,root vegetables,yogurt,whole milk
+salty snack,brown bread,beef,bottled beer,shopping bags,tropical fruit,root vegetables,yogurt,bottled water,other vegetables,rolls/buns,whole milk
+hygiene articles,frozen vegetables,fruit/vegetable juice,coffee,pastry,tropical fruit,yogurt,other vegetables,whole milk
+napkins,pork,shopping bags,tropical fruit,soda
+long life bakery product,chicken,white bread,pip fruit,napkins,frozen vegetables,butter,domestic eggs,fruit/vegetable juice,whipped/sour cream,tropical fruit,root vegetables,yogurt,bottled water,other vegetables,whole milk

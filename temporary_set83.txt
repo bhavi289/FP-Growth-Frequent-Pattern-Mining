@@ -1,0 +1,42 @@
+pork,whipped/sour cream,soda,other vegetables,whole milk
+yogurt
+tropical fruit,rolls/buns,whole milk
+pork,whipped/sour cream,coffee,citrus fruit
+brown bread,beef,citrus fruit,root vegetables
+whipped/sour cream
+citrus fruit
+soda
+brown bread,beef,root vegetables,whole milk
+shopping bags,tropical fruit,root vegetables,bottled water,other vegetables
+pork,pastry,root vegetables,other vegetables
+citrus fruit,root vegetables,soda,whole milk
+beef,whipped/sour cream,root vegetables,whole milk
+margarine,curd,root vegetables,other vegetables
+whipped/sour cream,shopping bags
+curd,root vegetables,other vegetables,whole milk
+coffee
+domestic eggs,beef,whipped/sour cream,rolls/buns
+shopping bags
+fruit/vegetable juice,whole milk
+pork,beef,coffee,newspapers,soda,whole milk
+fruit/vegetable juice,citrus fruit,other vegetables
+citrus fruit,tropical fruit,root vegetables,bottled water,other vegetables,whole milk
+brown bread,beef,coffee,citrus fruit
+beef,rolls/buns
+whipped/sour cream,other vegetables,whole milk
+margarine,curd,citrus fruit,yogurt,soda,rolls/buns,whole milk
+pork,beef,sausage,newspapers,root vegetables,bottled water,rolls/buns,whole milk
+whipped/sour cream,newspapers,bottled water,soda,other vegetables
+domestic eggs,whipped/sour cream,whole milk
+coffee,yogurt,other vegetables,whole milk
+whipped/sour cream,tropical fruit,root vegetables,yogurt,whole milk
+margarine,fruit/vegetable juice,whipped/sour cream,shopping bags,whole milk
+curd,sausage,citrus fruit,root vegetables
+whipped/sour cream,pastry,sausage,citrus fruit,tropical fruit,whole milk
+pork,whipped/sour cream,newspapers,soda
+beef,pastry
+whipped/sour cream,newspapers,whole milk
+coffee,shopping bags,root vegetables,whole milk
+beef,newspapers,yogurt,rolls/buns,whole milk
+fruit/vegetable juice,whipped/sour cream,canned beer,pastry,tropical fruit,yogurt,bottled water,other vegetables,whole milk
+domestic eggs,margarine,whipped/sour cream,sausage,pastry,citrus fruit,yogurt,other vegetables,whole milk

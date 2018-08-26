@@ -1,0 +1,41 @@
+yogurt
+bottled water,other vegetables
+yogurt,bottled water,whole milk
+root vegetables,other vegetables,rolls/buns
+root vegetables,yogurt,soda,whole milk
+other vegetables
+rolls/buns
+rolls/buns,whole milk
+root vegetables,other vegetables
+yogurt,whole milk
+whole milk
+other vegetables,whole milk
+bottled water
+root vegetables,yogurt,other vegetables,whole milk
+root vegetables,bottled water,other vegetables
+yogurt,bottled water,soda,other vegetables,rolls/buns,whole milk
+soda,other vegetables,whole milk
+root vegetables,whole milk
+root vegetables,rolls/buns,whole milk
+root vegetables,yogurt,whole milk
+soda
+yogurt,soda,rolls/buns
+bottled water,rolls/buns
+root vegetables,yogurt,bottled water,soda
+other vegetables,rolls/buns
+root vegetables,soda,other vegetables
+bottled water,other vegetables,whole milk
+yogurt,bottled water,other vegetables
+root vegetables,bottled water
+root vegetables,bottled water,other vegetables,whole milk
+root vegetables,yogurt,rolls/buns,whole milk
+yogurt,bottled water,rolls/buns
+soda,rolls/buns
+root vegetables,yogurt
+yogurt,bottled water,soda,rolls/buns
+root vegetables,yogurt,bottled water,other vegetables,rolls/buns,whole milk
+yogurt,other vegetables,whole milk
+yogurt,bottled water,other vegetables,whole milk
+root vegetables,yogurt,other vegetables
+root vegetables,yogurt,bottled water,other vegetables,whole milk
+yogurt,other vegetables

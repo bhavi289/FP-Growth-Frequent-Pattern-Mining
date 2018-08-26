@@ -1,0 +1,174 @@
+269^ whole milk
+222^ rolls/buns
+186^ other vegetables
+159^ soda
+132^ bottled water
+127^ yogurt
+110^ root vegetables
+97^ tropical fruit
+95^ citrus fruit
+89^ newspapers
+78^ sausage
+78^ pastry
+78^ shopping bags
+76^ coffee
+76^ bottled beer
+76^ canned beer
+75^ curd
+74^ whipped/sour cream
+73^ frankfurter
+69^ beef
+67^ fruit/vegetable juice
+56^ margarine
+53^ pork
+53^ domestic eggs
+50^ brown bread
+47^ berries
+46^ frozen vegetables
+46^ butter
+45^ hygiene articles
+44^ napkins
+41^ sugar
+41^ pip fruit
+40^ cream cheese 
+37^ hamburger meat
+35^ salty snack
+33^ beverages
+33^ packaged fruit/vegetables
+33^ chocolate
+33^ onions
+33^ white bread
+32^ chicken
+32^ dessert
+30^ oil
+28^ detergent
+28^ sliced cheese
+27^ butter milk
+26^ long life bakery product
+26^ UHT-milk
+26^ misc. beverages
+25^ specialty bar
+25^ candy
+24^ hard cheese
+23^ ice cream
+23^ grapes
+22^ waffles
+21^ ham
+154^ whole milk,rolls/buns 
+51^ whole milk,other vegetables 
+31^ whole milk,soda 
+31^ rolls/buns,soda 
+22^ whole milk,bottled water 
+22^ other vegetables,bottled water 
+22^ other vegetables,bottled water 
+22^ other vegetables,bottled water 
+22^ rolls/buns,bottled water 
+31^ rolls/buns,yogurt 
+31^ bottled water,yogurt 
+31^ other vegetables,yogurt 
+31^ whole milk,yogurt 
+31^ rolls/buns,yogurt 
+31^ other vegetables,yogurt 
+31^ whole milk,yogurt 
+24^ other vegetables,root vegetables 
+24^ whole milk,root vegetables 
+24^ whole milk,root vegetables 
+24^ whole milk,root vegetables 
+24^ other vegetables,root vegetables 
+24^ whole milk,root vegetables 
+24^ rolls/buns,root vegetables 
+24^ other vegetables,root vegetables 
+24^ other vegetables,root vegetables 
+24^ other vegetables,root vegetables 
+24^ whole milk,root vegetables 
+21^ other vegetables,tropical fruit 
+21^ whole milk,tropical fruit 
+21^ whole milk,tropical fruit 
+21^ whole milk,tropical fruit 
+21^ whole milk,tropical fruit 
+36^ whole milk,citrus fruit 
+36^ rolls/buns,citrus fruit 
+36^ whole milk,citrus fruit 
+36^ rolls/buns,citrus fruit 
+36^ other vegetables,citrus fruit 
+36^ other vegetables,citrus fruit 
+36^ other vegetables,citrus fruit 
+36^ other vegetables,citrus fruit 
+36^ rolls/buns,citrus fruit 
+36^ whole milk,citrus fruit 
+36^ whole milk,citrus fruit 
+36^ rolls/buns,citrus fruit 
+36^ whole milk,citrus fruit 
+36^ rolls/buns,citrus fruit 
+36^ whole milk,citrus fruit 
+36^ rolls/buns,citrus fruit 
+36^ whole milk,citrus fruit 
+36^ rolls/buns,citrus fruit 
+23^ rolls/buns,newspapers 
+23^ whole milk,newspapers 
+23^ rolls/buns,newspapers 
+23^ whole milk,newspapers 
+23^ rolls/buns,newspapers 
+23^ whole milk,newspapers 
+23^ rolls/buns,newspapers 
+23^ whole milk,newspapers 
+23^ rolls/buns,newspapers 
+23^ whole milk,newspapers 
+23^ rolls/buns,newspapers 
+23^ whole milk,newspapers 
+24^ rolls/buns,sausage 
+24^ rolls/buns,sausage 
+24^ rolls/buns,sausage 
+24^ whole milk,sausage 
+24^ whole milk,sausage 
+24^ rolls/buns,sausage 
+24^ rolls/buns,sausage 
+24^ whole milk,sausage 
+24^ rolls/buns,sausage 
+26^ whole milk,pastry 
+26^ whole milk,pastry 
+26^ rolls/buns,pastry 
+26^ whole milk,pastry 
+26^ whole milk,pastry 
+21^ whole milk,coffee 
+21^ whole milk,bottled beer 
+21^ whole milk,curd 
+21^ whole milk,curd 
+21^ whole milk,curd 
+21^ whole milk,whipped/sour cream 
+21^ rolls/buns,frankfurter 
+24^ whole milk,beef 
+24^ whole milk,beef 
+24^ rolls/buns,beef 
+24^ whole milk,beef 
+24^ whole milk,beef 
+24^ rolls/buns,beef 
+24^ rolls/buns,beef 
+24^ whole milk,beef 
+24^ whole milk,beef 
+24^ whole milk,beef 
+24^ rolls/buns,beef 
+24^ whole milk,beef 
+24^ rolls/buns,beef 
+24^ whole milk,beef 
+24^ whole milk,beef 
+24^ rolls/buns,beef 
+24^ whole milk,beef 
+21^ whole milk,fruit/vegetable juice 
+21^ whole milk,fruit/vegetable juice 
+21^ whole milk,fruit/vegetable juice 
+21^ whole milk,fruit/vegetable juice 
+21^ whole milk,fruit/vegetable juice 
+21^ whole milk,fruit/vegetable juice 
+21^ whole milk,fruit/vegetable juice 
+21^ whole milk,fruit/vegetable juice 
+21^ whole milk,fruit/vegetable juice 
+21^ whole milk,margarine 
+21^ whole milk,margarine 
+21^ whole milk,margarine 
+21^ whole milk,pork 
+21^ whole milk,domestic eggs 
+21^ whole milk,brown bread 
+21^ whole milk,berries 
+21^ whole milk,frozen vegetables 
+21^ whole milk,butter 
